@@ -28,19 +28,19 @@ namespace BubbleSortB
                 else
                     Console.WriteLine("\nArray dapat mempunyai maksimal 20 elemen.\n");
             }
-                Console.WriteLine("");
-                Console.WriteLine("-----------------------");
-                Console.WriteLine(" Masukkan elemen array ");
-                Console.WriteLine("-----------------------");
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine(" Masukkan elemen array ");
+            Console.WriteLine("-----------------------");
 
-                // Pengguna memasukkan elemen pada array
-                for (int i = 0; i < n; i++)
-                {
-                    Console.Write("<" + (i + 1) + "> ");
-                    string s1 = Console.ReadLine();
-                    a[i] = Int32.Parse(s1);
-                }
+            // Pengguna memasukkan elemen pada array
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("<" + (i + 1) + "> ");
+                string s1 = Console.ReadLine();
+                a[i] = Int32.Parse(s1);
             }
+        }
         public void display()
         {
             // Menampilkan array yang tersusun 
@@ -56,7 +56,7 @@ namespace BubbleSortB
         }
         public void BubbleSortArray()
         {
-            for  (int i = 1; i < n; i++) // For n - 1 passes
+            for (int i = 1; i < n; i++) // For n - 1 passes
             {
                 // Pada pass i, bandingkan n - i elemen pertama dengan elemen selanjutnya
                 for (int j = 0; j < n - i; j++)
@@ -72,10 +72,24 @@ namespace BubbleSortB
                 }
             }
         }
-                
 
-                }
-            }
+        static void Main(string[] args)
+        {
+            // Creating the object of the BubbleSort class
+            Program myList = new Program();
+
+            // Pemanggilan fungsi untuk menerima elemen array
+            myList.read();
+            // Pemanggilan fungsi untuk mengurutkan array
+            myList.BubbleSortArray();
+            // Pemanggilan fungsi untuk menampilkan array yang tersusun
+            myList.display();
+            // Exit
+            Console.WriteLine("\n\nTekan Tombol Apa Saja Untuk Keluar.");
+            Console.Read();
+        }
+    }
+}
         
     
 
